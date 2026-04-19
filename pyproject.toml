@@ -1,0 +1,47 @@
+[project]
+name = "text-mining-baselines"
+version = "0.1.0"
+description = "Educational-level-aware text simplification baselines and training pipeline."
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "google-generativeai>=0.8.0",
+    "requests>=2.31.0",
+    "sentencepiece>=0.2.0",
+    "torch>=2.2.0",
+    "transformers==4.57.1",
+]
+
+[dependency-groups]
+method = [
+    "accelerate>=1.13.0",
+    "datasets>=4.6.1",
+    "evaluate>=0.4.6",
+    "numpy>=2.2.6",
+    "pyyaml>=6.0.3",
+    "rouge-score>=0.1.2",
+    "sacrebleu>=2.6.0",
+    "wandb>=0.25.0",
+]
+readability = [
+    "en-core-web-sm",
+    "nltk>=3.9.3",
+    "spacy>=3.8.11",
+    "textstat>=0.7.13",
+    "tqdm>=4.67.3",
+]
+roundtrip = [
+    "sacremoses>=0.1.1",
+]
+evaluation = [
+    "bert-score>=0.3.13",
+    "pandas>=2.3.3",
+    "textstat>=0.7.13",
+    "tqdm>=4.67.3",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }

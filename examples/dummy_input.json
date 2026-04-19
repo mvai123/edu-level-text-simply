@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "text": "The proliferation of sophisticated terminology in this sentence renders it challenging for younger readers to comprehend.",
+    "age_band": "kindergarten"
+  },
+  {
+    "id": 2,
+    "text": "This paragraph elucidates a complex scientific phenomenon using dense and highly technical language that may obscure the core idea.",
+    "age_band": "primary"
+  },
+  {
+    "id": 3,
+    "text": "The committee will reconvene next week to finalize the comprehensive proposal, carefully considering all prior feedback and potential implications.",
+    "age_band": "secondary"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "text": "The proliferation of sophisticated terminology in this sentence renders it challenging for younger readers to comprehend.",
+    "age_band": "kindergarten",
+    "source": "The proliferation of sophisticated terminology in this sentence renders it challenging for younger readers to comprehend.",
+    "simplified_identity": "The proliferation of sophisticated terminology in this sentence renders it challenging for younger readers to comprehend."
+  },
+  {
+    "id": 2,
+    "text": "This paragraph elucidates a complex scientific phenomenon using dense and highly technical language that may obscure the core idea.",
+    "age_band": "primary",
+    "source": "This paragraph elucidates a complex scientific phenomenon using dense and highly technical language that may obscure the core idea.",
+    "simplified_identity": "This paragraph elucidates a complex scientific phenomenon using dense and highly technical language that may obscure the core idea."
+  },
+  {
+    "id": 3,
+    "text": "The committee will reconvene next week to finalize the comprehensive proposal, carefully considering all prior feedback and potential implications.",
+    "age_band": "secondary",
+    "source": "The committee will reconvene next week to finalize the comprehensive proposal, carefully considering all prior feedback and potential implications.",
+    "simplified_identity": "The committee will reconvene next week to finalize the comprehensive proposal, carefully considering all prior feedback and potential implications."
+  }
+]

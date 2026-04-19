@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "text": "The proliferation of sophisticated terminology in this sentence renders it challenging for younger readers to comprehend.",
+    "age_band": "kindergarten",
+    "source": "The proliferation of sophisticated terminology in this sentence renders it challenging for younger readers to comprehend.",
+    "simplified_gemini": "This sentence has many big words. It is hard for"
+  },
+  {
+    "id": 2,
+    "text": "This paragraph elucidates a complex scientific phenomenon using dense and highly technical language that may obscure the core idea.",
+    "age_band": "primary",
+    "source": "This paragraph elucidates a complex scientific phenomenon using dense and highly technical language that may obscure the core idea.",
+    "simplified_gemini": "This part explains a tricky science idea. It uses hard"
+  },
+  {
+    "id": 3,
+    "text": "The committee will reconvene next week to finalize the comprehensive proposal, carefully considering all prior feedback and potential implications.",
+    "age_band": "secondary",
+    "source": "The committee will reconvene next week to finalize the comprehensive proposal, carefully considering all prior feedback and potential implications.",
+    "simplified_gemini": "The committee will meet again next week to finish"
+  }
+]

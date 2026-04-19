@@ -1,0 +1,63 @@
+# T5 training configuration
+
+# ---------- Model ----------
+model:
+  name_or_path: weights/flan_t5_base   # HF hub id or local path
+  max_input_length: 512
+  max_target_length: 128
+
+# ---------- Data ----------
+data:
+  train_file: data/train.jsonl
+  val_file: data/validation.jsonl
+  test_file: null                        # optional
+  input_column: "input"
+  output_column: "output"
+  transformation_fn: "Task: age-specific simplification\nTarget level: [age]\nInput: [input]"
+  input_prefix: null
+  val_split_ratio: 0.1                  # used only when val_file is null
+
+# ---------- Training ----------
+training:
+  output_dir: outputs/saves/flan_t5_base_simple
+  num_train_epochs: 5
+  per_device_train_batch_size: 8
+  per_device_eval_batch_size: 16
+  gradient_accumulation_steps: 2
+  learning_rate: 3e-4
+  lr_scheduler_type: "cosine"           # linear | cosine | constant | polynomial
+  warmup_ratio: 0.05
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  fp16: false
+  bf16: true                            # prefer bf16 on A100/H100
+  seed: 42
+
+# ---------- Evaluation & Saving ----------
+evaluation:
+  strategy: "epoch"                     # steps | epoch | no
+  eval_steps: 500                       # used only when strategy = "steps"
+  save_strategy: "epoch"
+  save_total_limit: 2
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+  greater_is_better: false
+
+# ---------- Logging ----------
+logging:
+  report_to: none                     # none | wandb | tensorboard
+  logging_steps: 50
+  run_name: t5-finetune-run
+
+# ---------- Generation (for eval BLEU/ROUGE) ----------
+generation:
+  num_beams: 4
+  early_stopping: true
+  compute_metrics: true                 # set false to skip BLEU/ROUGE during eval
+
+# ---------- Inference (infer_t5.py only, ignored by training) ----------
+infer:
+  batch_size: 16
+  decode_strategy: "beam"              # greedy | beam  (num_return_sequences is always 1)
+  device: "auto"                       # auto | cpu | cuda | mps
+  output_dir: "outputs/predictions"    # output JSONL written to {output_dir}/{run_name}.jsonl
