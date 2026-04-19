@@ -129,7 +129,6 @@ uv run python evaluation/academic_eval.py \
 
 The evaluation directory will contain:
 
-- example_metrics_non_llm.csv
 - summary_by_system_level.csv
 - summary_macro.csv
 
